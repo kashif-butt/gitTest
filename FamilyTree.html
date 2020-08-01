@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head> 
+</head>
+
+<body>
+<h1> Family Tree </h1>
+<h1> Family Tree Row From Local Computer</h1>
+<ul>
+ <li> <a onClick="hideChildren('c1', 'child1')" href="#"> Maroof </a></li>
+   <ul id="c1" class="child1">
+    <li> Khurram </li> 
+    <li> Junaid </li> 
+   </ul>
+ <li> <a onClick="hideChildren('c2', 'child2')" href="#Matloob"> Matloob </a></li>
+   <ul id="c2" class="child2">
+    <li> Adil </li> 
+    <li> Zonia </li> 
+    <li> Usman </li>
+    <li> Afan </li>
+   </ul>
+ <li> <a href="#Maryam"> Maryam </a></li>
+ <li> <a onClick="hideChildren('c4', 'child4')" href="#Kalsoom"> Kalsoom </a></li>
+   <ul id="c4" class="child4">
+    <li> Murtaza </li> 
+    <li> Amina </li> 
+    <li> Saad </li>
+   </ul>
+ <li> <a href="#Nighat"> Nighat </a></li>
+ <li> <a href="#Nayar"> Nayar </a></li>
+ <li> <a href="#Shabnam"> Shabnam </a></li>
+ <li> <a href="#Kashif"> Kashif </a></li>
+ <li> <a href="#Afshan"> Afshan </a></li>
+</ul>
+
+
+<script>
+function hideChildren (pid, cname) {
+ if (!document.getElementById(pid).style.display || document.getElementById(pid).style.display == "block") {
+  var x=document.getElementsByClassName(cname);
+  for ( var i = 0; i<x.length; i++) {
+    x[i].style.display = "none";
+  }
+ }
+ else {
+  var x=document.getElementsByClassName(cname);
+  for ( var i = 0; i<x.length; i++) {
+    x[i].style.display = "block";
+  }
+ }
+}
+</script>
+
+</body>
+</html>
